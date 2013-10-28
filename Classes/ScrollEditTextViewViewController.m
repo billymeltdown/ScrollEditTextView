@@ -119,7 +119,9 @@
 
 - (void)keyboardDidShow:(NSNotification *)aNotification {
     NSDictionary* info = [aNotification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGRect kbRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    kbRect = [[self view] convertRect:kbRect fromView:nil];
+    CGSize kbSize = kbRect.size;
     CGRect aRect = self.view.frame;
 
     /* This should work, but doesn't quite qet the job done */
@@ -154,7 +156,9 @@
 //    self.textView.scrollIndicatorInsets = contentInsets;
     
     /* Instead, we restore the original size of the textView frame */
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGRect kbRect = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    kbRect = [[self view] convertRect:kbRect fromView:nil];
+    CGSize kbSize = kbRect.size;
     CGRect frame = self.textView.frame;
     frame.size.height += kbSize.height + VERTICAL_KEYRBOARD_MARGIN;
     self.textView.frame = frame;
