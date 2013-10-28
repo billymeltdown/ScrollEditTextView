@@ -1,0 +1,159 @@
+// !$*UTF8*$!
+{
+	1384597510B5FFD6008A3A12 /* ScrollEditTextView */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ScrollEditTextView;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+	};
+	1384598410B5FFE7008A3A12 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	1384598510B5FFE7008A3A12 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1384598A10B6012B008A3A12 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ScrollEditTextViewViewController.h */;
+		name = "ScrollEditTextViewViewController.h: 15";
+		rLen = 0;
+		rLoc = 463;
+		rType = 0;
+		vrLen = 357;
+		vrLoc = 0;
+	};
+	1384599710B60167008A3A12 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ScrollEditTextViewViewController.m */;
+		name = "ScrollEditTextViewViewController.m: 64";
+		rLen = 0;
+		rLoc = 2530;
+		rType = 0;
+		vrLen = 684;
+		vrLoc = 873;
+	};
+	138459A210B602DF008A3A12 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ScrollEditTextViewViewController.h */;
+		name = "ScrollEditTextViewViewController.h: 19";
+		rLen = 0;
+		rLoc = 502;
+		rType = 0;
+		vrLen = 510;
+		vrLoc = 0;
+	};
+	13845AA510B7329E008A3A12 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ScrollEditTextViewViewController.m */;
+		name = "ScrollEditTextViewViewController.m: 74";
+		rLen = 0;
+		rLoc = 2025;
+		rType = 0;
+		vrLen = 845;
+		vrLoc = 1621;
+	};
+	13A23FC910BDCCED00B21871 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ScrollEditTextViewViewController.m */;
+		name = "ScrollEditTextViewViewController.m: 74";
+		rLen = 0;
+		rLoc = 2025;
+		rType = 0;
+		vrLen = 844;
+		vrLoc = 1622;
+	};
+	1D6058900D05DD3D006BFB54 /* ScrollEditTextView */ = {
+		activeExec = 0;
+		executables = (
+			1384597510B5FFD6008A3A12 /* ScrollEditTextView */,
+		);
+	};
+	28D7ACF60DDB3853001CB0EB /* ScrollEditTextViewViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {798, 434}}";
+			sepNavSelRange = "{502, 0}";
+			sepNavVisRange = "{0, 510}";
+		};
+	};
+	28D7ACF70DDB3853001CB0EB /* ScrollEditTextViewViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {798, 1552}}";
+			sepNavSelRange = "{2025, 0}";
+			sepNavVisRange = "{1622, 844}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1384597510B5FFD6008A3A12 /* ScrollEditTextView */;
+		activeSDKPreference = iphonesimulator3.0;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* ScrollEditTextView */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* ScrollEditTextView */,
+		);
+		codeSenseManager = 1384598510B5FFE7008A3A12 /* Code sense */;
+		executables = (
+			1384597510B5FFD6008A3A12 /* ScrollEditTextView */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					620,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 280871795;
+			PBXWorkspaceStateSaveDate = 280871795;
+		};
+		perUserProjectItems = {
+			1384598A10B6012B008A3A12 /* PBXTextBookmark */ = 1384598A10B6012B008A3A12 /* PBXTextBookmark */;
+			1384599710B60167008A3A12 /* PBXTextBookmark */ = 1384599710B60167008A3A12 /* PBXTextBookmark */;
+			138459A210B602DF008A3A12 /* PBXTextBookmark */ = 138459A210B602DF008A3A12 /* PBXTextBookmark */;
+			13845AA510B7329E008A3A12 /* PBXTextBookmark */ = 13845AA510B7329E008A3A12 /* PBXTextBookmark */;
+			13A23FC910BDCCED00B21871 /* PBXTextBookmark */ = 13A23FC910BDCCED00B21871 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1384598410B5FFE7008A3A12 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+}
