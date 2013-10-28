@@ -130,10 +130,10 @@
     // Your application might not need or want this behavior.
     CGRect aRect = self.view.frame;
     aRect.size.height -= height;
-//    if (!CGRectContainsPoint(aRect, self.textView.frame.origin) ) {
+    if (!CGRectContainsPoint(aRect, self.textView.frame.origin) ) {
         CGPoint scrollPoint = CGPointMake(0.0, self.textView.frame.origin.y - height);
         [self.textView setContentOffset:scrollPoint animated:YES];
-//    }
+    }
 //    [self.textView scrollRectToVisible:CGRectZero animated:YES];
 }
 
