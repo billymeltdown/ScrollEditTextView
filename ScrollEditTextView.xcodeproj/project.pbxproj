@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13845A4410B609B3008A3A12 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 13845A4310B609B3008A3A12 /* paper.png */; };
 		1D3623260D0F684500981E51 /* ScrollEditTextViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ScrollEditTextViewAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -20,7 +19,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13845A4310B609B3008A3A12 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* ScrollEditTextViewAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollEditTextViewAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* ScrollEditTextViewAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollEditTextViewAppDelegate.m; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				13845A4310B609B3008A3A12 /* paper.png */,
 				2899E5210DE3E06400AC0155 /* ScrollEditTextViewViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* ScrollEditTextView-Info.plist */,
@@ -164,7 +161,6 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				28EF4947181AFF4E004C9EDE /* Default-568h@2x.png in Resources */,
 				2899E5220DE3E06400AC0155 /* ScrollEditTextViewViewController.xib in Resources */,
-				13845A4410B609B3008A3A12 /* paper.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
