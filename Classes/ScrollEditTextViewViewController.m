@@ -15,6 +15,8 @@
 
 @implementation ScrollEditTextViewViewController
 
+#define VERTICAL_KEYRBOARD_MARGIN 4.0f;
+
 @synthesize textView;
 
 /*
@@ -90,6 +92,11 @@
     [self.navigationItem.rightBarButtonItem setEnabled:NO];
 }
 
+- (BOOL)textView:(UITextView *)aTextView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    [aTextView scrollRangeToVisible:range];
+    return YES;
+}
+
 #pragma mark -
 #pragma mark Keyboard Handling
 
@@ -113,36 +120,44 @@
 - (void)keyboardDidShow:(NSNotification *)aNotification {
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-    CGFloat height = kbSize.height;
-//    if (self.navigationController != nil) {
-//        CGSize navBarSize = self.navigationController.navigationBar.frame.size;
-//        height -= navBarSize.height;
-//    }
-    UIEdgeInsets insets = self.textView.contentInset;
-    insets.bottom = height;
-    self.textView.contentInset = insets;
+    CGRect aRect = self.view.frame;
+
+    /* This should work, but doesn't quite qet the job done */
+//    UIEdgeInsets insets = self.textView.contentInset;
+//    insets.bottom = kbSize.height;
+//    self.textView.contentInset = insets;
+//    
+//    insets = self.textView.scrollIndicatorInsets;
+//    insets.bottom = kbSize.height;
+//    self.textView.scrollIndicatorInsets = insets;
     
-    insets = self.textView.scrollIndicatorInsets;
-    insets.bottom = height;
-    self.textView.scrollIndicatorInsets = insets;
+    /* Instead, we just adjust the frame of the uitextview */
+    aRect.size.height -= kbSize.height + VERTICAL_KEYRBOARD_MARGIN;
+    self.textView.frame = aRect;
     
     // If active text field is hidden by keyboard, scroll it so it's visible
     // Your application might not need or want this behavior.
-    CGRect aRect = self.view.frame;
-    aRect.size.height -= height;
     if (!CGRectContainsPoint(aRect, self.textView.frame.origin) ) {
-        CGPoint scrollPoint = CGPointMake(0.0, self.textView.frame.origin.y - height);
+        CGPoint scrollPoint = CGPointMake(0.0, self.textView.frame.origin.y - kbSize.height);
         [self.textView setContentOffset:scrollPoint animated:YES];
     }
-//    [self.textView scrollRectToVisible:CGRectZero animated:YES];
 }
 
 - (void)keyboardWillHide:(NSNotification *)aNotification {
+    NSDictionary* info = [aNotification userInfo];
+    
+    /* If you're following the docs, this is how to reset the contentInsets adjusted when keyboard was shown */
     // reset the content insets to restore the text view's content area to its proper size
-    UIEdgeInsets contentInsets = self.textView.contentInset;
-    contentInsets.bottom = 0;
-    self.textView.contentInset = contentInsets;
-    self.textView.scrollIndicatorInsets = contentInsets;
+//    UIEdgeInsets contentInsets = self.textView.contentInset;
+//    contentInsets.bottom = 0;
+//    self.textView.contentInset = contentInsets;
+//    self.textView.scrollIndicatorInsets = contentInsets;
+    
+    /* Instead, we restore the original size of the textView frame */
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGRect frame = self.textView.frame;
+    frame.size.height += kbSize.height + VERTICAL_KEYRBOARD_MARGIN;
+    self.textView.frame = frame;
 }
 
 - (void)dealloc {
